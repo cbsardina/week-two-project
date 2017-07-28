@@ -4,12 +4,10 @@
 // is properly working. The `data` variable is an array with 25 items in it
 console.log(data);
 
-
-
 // 1: Show me how to calculate the average price of all items.
 function question1 () {
   let totalPrice = 0;
-  for (i = 0; i < 25; i++){
+  for (let i = 0; i < data.length; i++) {
     totalPrice = totalPrice + data[i].price;
   }
   let averagePrice = totalPrice/25;
@@ -19,27 +17,33 @@ function question1 () {
 // 2: Show me how to get an array of items that cost between $14.00 and $18.00 USD
 function question2 () {
   let priceRange = [];
-  for (i = 0; i < 25; i++){
+  for (let i = 0; i < data.length; i++) {
     if ((data[i].price >= 14.00) && (data[i].price <= 18.00)) {
-      priceRange.push(data[i]);
+      priceRange.push(data[i].title);
     }
   }
   console.log(priceRange);
 }
 
-
-
 // 3: Which item has a "GBP" currency code? Display it's name and price.
 function question3 () {
-  // Answer:
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].currency_code === "GBP")
+    console.log(data[i].title + " " + data[i].price + " pounds.");
+  }
 }
 
 
 // 4: Display a list of all items who are made of wood.
 function question4 () {
-  // Answer:
+  for (let i=0; i < data.length; i++){
+    for (let j = 0; j < data[i].materials.length; j++){
+      if (data[i].materials[j] === "wood") {
+        console.log(data[i].title);
+      }
+    }
+  }
 }
-
 
 // 5: Which items are made of eight or more materials?
 //    Display the name, number of items and the items it is made of.
