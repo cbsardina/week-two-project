@@ -50,7 +50,7 @@ function question4 () {
 function question5 () {
   for (let i = 0; i < data.length; i++) {
     if (data[i].materials.length >= 8) {
-      console.log(data[i].title + " " + data[i].materials.length + " " + data[i].materials);
+      console.log("|| NAME: " + data[i].title + " || NUMBER OF ITEMS: " + data[i].materials.length + " || MATERIALS: " + data[i].materials);
     }
   }
 }
