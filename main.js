@@ -29,7 +29,7 @@ function question2 () {
 function question3 () {
   for (let i = 0; i < data.length; i++) {
     if (data[i].currency_code === "GBP")
-    console.log(data[i].title + " " + data[i].price + " pounds.");
+    console.log(1*[i] + ". " + data[i].title + " " + data[i].price + " pounds.");
   }
 }
 
@@ -39,7 +39,7 @@ function question4 () {
   for (let i = 0; i < data.length; i++){
     for (let j = 0; j < data[i].materials.length; j++){
       if (data[i].materials[j] === "wood") {
-        console.log(1*[i] + ". " + data[i].title);
+        console.log(1*[i] + ". " + data[i].title + " is made of wood.");
       }
     }
   }
@@ -54,7 +54,6 @@ function question5 () {
       materialsArray.push(data[i].materials);
       console.log(1*[i] + ". || NAME: " + data[i].title + " || NUMBER OF ITEMS: " + data[i].materials.length);
       console.log(materialsArray);
-      // console.log(1*[i] + ". || NAME: " + data[i].title + " || NUMBER OF ITEMS: " + data[i].materials.length + " || MATERIALS: " + data[i].materials);
     }
   }
 }
